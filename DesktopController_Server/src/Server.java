@@ -14,11 +14,11 @@ public class Server{
 		try {
 			//Create a socket
 			System.out.println("Creating Socket");
-			socket = new ServerSocket(0);
-			socket.setSoTimeout(60000);
+			socket = new ServerSocket(2015);
+			socket.setSoTimeout(600000);
 			
 			System.out.println("Server Info:");
-			System.out.println("address: "+socket.getInetAddress().getHostAddress());
+			System.out.println("address: "+socket.getInetAddress().getLocalHost().getHostAddress());
 			System.out.println("port: "+socket.getLocalPort());
 			System.out.println("Waiting for Connection...");
 			
